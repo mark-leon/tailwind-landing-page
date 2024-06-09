@@ -1,4 +1,5 @@
 import React from "react";
+import { FcGoogle } from "react-icons/fc";
 
 const Login = () => {
   return (
@@ -12,6 +13,11 @@ const Login = () => {
           />
         </div>
         <div className="w-full md:w-1/2 p-20">
+          <img
+            src="https://s3.brilliant.com.bd/brilliant_drive_desktop/demo_novopay_logo.png"
+            alt="novopay logo"
+            className="pl-8"
+          ></img>
           <h2 className="text-[#3B82F6] font-bold font-sans mb-8 text-center text-2xl">
             Hello Again!
           </h2>
@@ -63,14 +69,13 @@ const Login = () => {
                 LOGIN
               </button>
             </div>
-            <div className="items-center justify-center mt-4">
+            <div className="items-center justify-center mt-4 flex">
               <button
-                className={
-                  "bg-white hover:bg-secondary w-[280px] p-2 text-sm text-[#3B82F6] border-s border border-gray-300 shadow-sm cursor-pointer"
-                }
+                className="bg-white hover:bg-secondary w-[280px] p-2 text-sm text-[#3B82F6] border-s border border-gray-300 shadow-sm cursor-pointer flex items-center justify-center space-x-2"
                 type="submit"
               >
-                Sign In With Google
+                <FcGoogle style={{ fontSize: "2rem" }} />
+                <span>Sign In With Google</span>
               </button>
             </div>
 
