@@ -24,7 +24,7 @@ const Main = () => {
           </div>
           <div className="flex justify-center">
             <img
-              src="https://s3.brilliant.com.bd/brilliant_drive_desktop/nothing_here.png"
+              src="https://s3.brilliant.com.bd/brilliant_drive_desktop/demo_novopay_header_image.png"
               alt="Phone"
               className="w-full h-auto"
             />

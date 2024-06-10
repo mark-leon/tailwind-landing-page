@@ -26,9 +26,9 @@ const Navbar = () => {
       <div>
         <span>
           <img
-            src="https://www.novotel-bd.com/images/logo_novotel.png"
+            src="https://s3.brilliant.com.bd/brilliant_drive_desktop/demo_novopay_logo.png"
             alt="logo"
-            className="px-12 py-4 cursor-pointer"
+            className="md:px-12 py-4 cursor-pointer"
             onClick={() => navigate("/")}
           />
         </span>
