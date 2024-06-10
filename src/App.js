@@ -1,24 +1,23 @@
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import About from "./components/about/About";
 import Contact from "./components/contact/Contact";
-import Footer from "./components/footer/Footer";
+import Layout from "./components/layout/Layout";
 import Login from "./components/login/Login";
 import Main from "./components/main/Main";
 import MissionVision from "./components/mission/MissionVision";
-import Navbar from "./components/navabar/Navbar";
 
 function App() {
   return (
-    <div>
-      <Navbar />
-      <Main />
-      <Footer />
-      <MissionVision />
-      <Footer />
-      <About />
-      <Contact />
-      <Login />
-    </div>
+    <Layout>
+      <Routes>
+        <Route path="/" element={<Main />} />
+        <Route path="/mission" element={<MissionVision />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </Layout>
   );
 }
 

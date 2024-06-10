@@ -31,9 +31,6 @@ const Main = () => {
           </div>
         </div>
       </div>
-      {/* <div className="bg-blue-500 px-20">
-        <p className="text-8xl text-center">FOOTER AREA</p>
-      </div> */}
     </>
   );
 };

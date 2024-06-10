@@ -2,7 +2,7 @@ import React from "react";
 
 const MissionVision = () => {
   return (
-    <section className="py-12 bg-white">
+    <section className="min-h-screen py-12 bg-white">
       <div className="relative py-8 bg-white">
         <div className="absolute right-0 top-0 mt-2 mr-4">
           <div className="bg-blue-500 text-white font-bold text-2xl px-6 py-2 rounded-ss-3xl">
