@@ -1,9 +1,12 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation();
+
+  const isActive = (path) => location.pathname === path;
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -58,17 +61,12 @@ const Navbar = () => {
         // className="hidden w-full md:flex md:items-center md:w-auto"
         id="menu"
       >
-        <ul
-          className="
-              pt-4
-              text-base text-gray-700
-              md:flex
-              md:justify-between 
-              md:pt-0"
-        >
+        <ul className="pt-4 text-base text-gray-700 md:flex md:justify-between md:pt-0">
           <li>
             <span
-              className="md:p-4 py-2 block text-blue-700 text-sm font-semibold hover:text-blue-400 cursor-pointer"
+              className={`md:p-4 py-2 block text-sm font-semibold cursor-pointer ${
+                isActive("/about") ? "text-blue-400" : "text-blue-700"
+              }`}
               onClick={() => navigate("/about")}
             >
               ABOUT US
@@ -76,7 +74,9 @@ const Navbar = () => {
           </li>
           <li>
             <span
-              className="md:p-4 py-2 block text-blue-700 text-sm font-semibold hover:text-blue-400 cursor-pointer"
+              className={`md:p-4 py-2 block text-sm font-semibold cursor-pointer ${
+                isActive("/mission") ? "text-blue-400" : "text-blue-700"
+              }`}
               onClick={() => navigate("/mission")}
             >
               MISSION AND VISION
@@ -84,24 +84,13 @@ const Navbar = () => {
           </li>
           <li>
             <span
-              className="md:p-4 py-2 block text-blue-700 text-sm font-semibold hover:text-blue-400 cursor-pointer"
+              className={`md:p-4 py-2 block text-sm font-semibold cursor-pointer ${
+                isActive("/contact") ? "text-blue-400" : "text-blue-700"
+              }`}
               onClick={() => navigate("/contact")}
             >
               CONTACT US
             </span>
-          </li>
-          <li>
-            <span
-              className="md:p-4 py-2 block text-blue-700 text-sm font-semibold hover:text-blue-400 cursor-pointer"
-              onClick={() => navigate("/login")}
-            >
-              LOGIN
-            </span>
-          </li>
-          <li>
-            <button className="p-1 px-2 block bg-blue-700 text-white text-sm font-semibold hover:bg-blue-500 rounded-md mt-3 cursor-pointer">
-              REGISTER
-            </button>
           </li>
         </ul>
       </div>
